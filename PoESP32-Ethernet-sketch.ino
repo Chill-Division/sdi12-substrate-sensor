@@ -32,7 +32,7 @@
 // Device Configuration
 #define HOSTNAME_PREFIX "sdi12sensor-"
 #define HOSTNAME_SUFFIX "greenhouse1"
-#define SDI12_DATA_PIN 26
+#define SDI12_DATA_PIN 16 // This is the yellow PIN on the PoESP32 Grove Port
 
 // Ethernet Configuration
 #define ETH_CLK_MODE    ETH_CLOCK_GPIO0_IN
