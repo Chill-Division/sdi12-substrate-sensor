@@ -1,9 +1,9 @@
 # SDI-12 Substrate Sensor
-Instructions for setting up an SDI12 substrate sensor to work over MQTT to Home Assistant
+Instructions for setting up an SDI12 substrate sensor to work over MQTT to Home Assistant with AUTODISCOVERY!
 
 This works with sensors such as the BGT-SEC(Z2) by [BGT Technology](https://www.alibaba.com/product-detail/China-low-price-CE-IP68-SID12_1600643601689.html) available from Alibaba, or alternatively works with the [Aroya Teros12](https://metergroup.com/products/teros-12/) as well.
 
-Installation is recommended by splicing a Grove cable directly, or use a [3-pole Female 3.5mm -> terminal](https://www.aliexpress.com/item/1005002295771551.html) adapter. The use of [M5Stack VH3.96 - 4Pin Transfer Module Unit](https://shop.m5stack.com/products/3-96-transfer-unit) does not seem to work.
+Installation is recommended by splicing a Grove cable directly, or use a [3-pole Female 3.5mm -> terminal](https://www.aliexpress.com/item/1005002295771551.html) adapter. The use of [M5Stack VH3.96 - 4Pin Transfer Module Unit](https://shop.m5stack.com/products/3-96-transfer-unit) does not seem to work. For the BGT-SEC(Z2), the unshielded cable is ground, white is power (3.6-16v DC) and the red cable is signal?!?
 
 ESPHome does not directly support SDI-12, and the UART wants TX/RX pins to be uniquely defined, so the easiest solution has been the Arduino IDE and MQTT. Simply install the Mosquitto Broker add-on in Home Assistant, by default this will also enable discovery, and these Sketches have been designed around autodiscovery.
 
